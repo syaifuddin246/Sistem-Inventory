@@ -91,7 +91,7 @@
         </a>
         <div id="collapsePages02" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="login.html">Penjualan Hijab</a>
+                <a class="collapse-item" href="{{url('/laporan/penjualan-hijab')}}">Penjualan Hijab</a>
             </div>
         </div>
     </li>

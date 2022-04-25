@@ -21,6 +21,13 @@ class BahanjadiController extends Controller
         $stokbahan = Bahanjadi::select('id','kodemasuk','kodekeluar','tglmasuk','tglkeluar','namabarang','namabarangkeluar','modelbarang','modelbarangkeluar','jmlmasuk','jmlkeluar','jmltotal','hargabarang','hargabarangkeluar','subtotal','subtotalkeluar','updated_at')->latest()->paginate(5);
         return view('admin/bahanjadi/stok',compact('stokbahan'));
     }
+
+    public function penjualanhijab(){
+        $subtotalpenjualan = Bahanjadi::sum('subtotalkeluar');
+        $laporanpenjualan = Bahanjadi::select('id','kodemasuk','kodekeluar','tglmasuk','tglkeluar','namabarang','namabarangkeluar','modelbarang','modelbarangkeluar','jmlmasuk','jmlkeluar','jmltotal','hargabarang','hargabarangkeluar','subtotal','subtotalkeluar','updated_at')->latest()->paginate(5);
+
+        return view('admin/laporan/penjualanhijab',compact('laporanpenjualan','subtotalpenjualan'));
+    }
     /**
      * Show the form for creating a new resource.
      *

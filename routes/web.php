@@ -48,3 +48,6 @@ Route::get('/bahanjadi/masuk',[BahanjadiController::class,'masuk']);
 Route::get('/bahanjadi/stok',[BahanjadiController::class,'stokbahan']);
 Route::patch('/bahanjadi/keluar',[BahanjadiController::class,'storekeluar']);
 Route::resource('/bahanjadi',BahanjadiController::class);
+
+// laporan penjualan hijab
+Route::get('/laporan/penjualan-hijab',[BahanjadiController::class,'penjualanhijab']);

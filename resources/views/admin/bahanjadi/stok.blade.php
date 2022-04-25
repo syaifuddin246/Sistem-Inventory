@@ -1,5 +1,5 @@
 @extends('admin/layouts/main')
-@section('title', 'Stok Bahan Baku')
+@section('title', 'Stok Bahan Jadi')
 @section('content')
     <div class="container">
         <div class="row justify-content-center pt-4" style="padding-bottom: 90px;">

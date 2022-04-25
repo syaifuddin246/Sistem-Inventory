@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BahanbakuController;
 use App\Http\Controllers\BahanjadiController;
+use App\Http\Controllers\PurchaseorderController;
 use App\Http\Controllers\SupplierController;
 use App\Models\Bahanbaku;
 use Illuminate\Support\Facades\Route;
@@ -27,6 +28,9 @@ Route::get('/beranda', [App\Http\Controllers\HomeController::class, 'index'])->n
 
 //supplier
 Route::resource('/supplier',SupplierController::class); 
+// purchase order
+Route::get('/purchase-order/request',[PurchaseorderController::class,'purchaseorder']);
+Route::resource('/purchase-order',PurchaseorderController::class);
 // bahan baku
 Route::patch('/bahanbaku/keluarbarang/{id}',[BahanbakuController::class,'update'])->name('update'); 
 Route::get('/bahanbaku/{id}/keluarbarang',[BahanbakuController::class,'keluarbarang']);

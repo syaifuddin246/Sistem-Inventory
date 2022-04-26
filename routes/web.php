@@ -22,7 +22,9 @@ Route::get('/', function () {
     return redirect('/login');
 });
 
-Auth::routes();
+Auth::routes([
+    'register' => false,
+]);
 
 Route::get('/beranda', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
